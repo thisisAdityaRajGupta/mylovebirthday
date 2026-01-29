@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Happy Birthday, My Love 💖</title>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#ff4fd8"/>
+</head>
+
+<body>
+  <!-- Background effects -->
+  <div class="bg-orb orb1"></div>
+  <div class="bg-orb orb2"></div>
+  <div class="bg-orb orb3"></div>
+  <canvas id="hearts"></canvas>
+
+  <!-- Main app -->
+  <main class="app">
+    <header class="topbar">
+      <div class="brand">
+        <span class="logo">💘</span>
+        <span class="brand-title">For My Love</span>
+      </div>
+      <div class="progress">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <div class="progress-text" id="progressText">1 / 7</div>
+      </div>
+    </header>
+
+    <section class="card" id="card">
+      <div class="card-glow"></div>
+
+      <div class="screen active" data-screen="intro">
+        <div class="hero">
+          <div class="badge">🎂 Birthday Surprise</div>
+          <h1>Hi, My Love ❤️</h1>
+          <p class="subtitle">
+            I made this little website just for you.  
+            Answer these sweet questions and unlock the final message ✨
+          </p>
+
+          <div class="cta-row">
+            <button class="btn btn-primary" id="startBtn">Start the Love Quiz 💞</button>
+          </div>
+
+          <p class="hint">
+            Tip: Choose the correct option to continue. Wrong answer shows a cute surprise 😺
+          </p>
+        </div>
+      </div>
+
+      <!-- Q1 -->
+      <div class="screen" data-screen="q1">
+        <div class="screen-head">
+          <div class="pill">Question 1</div>
+          <h2>When did I meet you… completely by coincidence?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="wrong">Dec 24, 2025 — 11:30 AM</button>
+          <button class="opt" data-answer="correct">Dec 24, 2025 — 11:34 AM</button>
+          <button class="opt" data-answer="wrong">Dec 23, 2025 — 11:34 AM</button>
+          <button class="opt" data-answer="wrong">Dec 24, 2025 — 11:35 AM</button>
+        </div>
+
+        <div class="note">
+          <p>
+            You were being such a kid — not taking anything seriously. Even when I asked you to be serious,
+            you kept laughing… and somehow, that laughter made me fall for you.
+            You looked <span class="em">so gorgeous</span> that day.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="screen" data-screen="q2">
+        <div class="screen-head">
+          <div class="pill">Question 2</div>
+          <h2>What is your favourite food?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="wrong">Kabuli Pulaw</button>
+          <button class="opt" data-answer="wrong">Ashak Manto</button>
+          <button class="opt" data-answer="wrong">Nothing</button>
+          <button class="opt" data-answer="correct">Ashak Manto and Kabuli Pulaw</button>
+        </div>
+
+        <div class="note">
+          <p>
+            I still can’t believe how someone can cook <span class="em">that perfectly</span> so effortlessly.
+            The magic in your hands feels like a miracle — like love you can taste.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="screen" data-screen="q3">
+        <div class="screen-head">
+          <div class="pill">Question 3</div>
+          <h2>What is your favourite color?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="correct">Black</button>
+          <button class="opt" data-answer="wrong">White</button>
+          <button class="opt" data-answer="wrong">Brown</button>
+          <button class="opt" data-answer="wrong">Red</button>
+        </div>
+
+        <div class="note">
+          <p>
+            Honestly… you absolutely <span class="em">slay</span> in black.  
+            The moment you wear black, the whole world feels jealous of me.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="screen" data-screen="q4">
+        <div class="screen-head">
+          <div class="pill">Question 4</div>
+          <h2>When did you finally do something I asked you to do?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="wrong">January 20, 2026</button>
+          <button class="opt" data-answer="correct">January 21, 2026</button>
+          <button class="opt" data-answer="wrong">January 22, 2026</button>
+          <button class="opt" data-answer="wrong">January 23, 2026</button>
+        </div>
+
+        <div class="note">
+          <p>
+            Even if it was a deal… I still felt grateful.  
+            It was a miracle feeling — the first time you truly listened to me,
+            and I got to help you. I’ll never forget that.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="screen" data-screen="q5">
+        <div class="screen-head">
+          <div class="pill">Question 5</div>
+          <h2>When did you stay awake late at night just to talk with me?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="wrong">January 22, 2026</button>
+          <button class="opt" data-answer="wrong">January 21, 2026</button>
+          <button class="opt" data-answer="correct">January 23, 2026</button>
+          <button class="opt" data-answer="wrong">January 24, 2026</button>
+        </div>
+
+        <div class="note">
+          <p>
+            Thank you… because in that moment you made me feel worthy.  
+            Every extra minute with you feels like luck choosing me.
+          </p>
+        </div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="screen" data-screen="q6">
+        <div class="screen-head">
+          <div class="pill">Question 6</div>
+          <h2>When did you finally meet me… just to let me see you?</h2>
+        </div>
+
+        <div class="options">
+          <button class="opt" data-answer="wrong">January 26, 2026 — 11:00 AM</button>
+          <button class="opt" data-answer="wrong">January 26, 2026 — 11:10 AM</button>
+          <button class="opt" data-answer="wrong">January 26, 2026 — 11:14 AM</button>
+          <button class="opt" data-answer="correct">January 26, 2026 — 11:13 AM</button>
+        </div>
+
+        <div class="note">
+          <p>
+            That moment is stuck in my heart.  
+            Seeing you felt like everything got quiet — like the universe whispered:
+            <span class="em">“This is the one.”</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Final -->
+      <div class="screen" data-screen="final">
+        <div class="final-wrap">
+          <div class="birthday-badge">✨ Level: Forever ✨</div>
+          <h1 class="final-title">Happy Birthday, My Love 🎂💖</h1>
+
+          <p class="final-msg">
+            Thank you for coming into my life.  
+            I will never regret loving you — not even for a second.
+            You showed me what love actually feels like… even if it was only for a moment,
+            even if it was only for a season — it was real to me.
+          </p>
+
+          <p class="final-msg">
+            On your special day, I promise you this:  
+            I will hold onto this love, protect it, and wait — even until eternity,
+            because what I feel for you is not ordinary.
+          </p>
+
+          <p class="final-msg">
+            And I truly believe… one day destiny and God will bring us closer again,
+            the same way they made us meet, the same way they made us understand each other.
+            Until then, my heart is yours — always.
+          </p>
+
+          <div class="final-actions">
+            <button class="btn btn-primary" id="confettiBtn">Make it Rain Love 💥💞</button>
+            <button class="btn btn-ghost" id="restartBtn">Replay the Quiz ↻</button>
+          </div>
+
+          <div class="signature">
+            <span>With all my love,</span>
+            <strong>— Your Forever Person ❤️</strong>
+          </div>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Wrong Answer Modal -->
+  <div class="modal" id="wrongModal" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-top">
+        <div class="modal-title">Oops 😭</div>
+        <div class="modal-sub">Please try again!</div>
+      </div>
+
+      <div class="gif-wrap">
+        <!-- You can replace this with any cat GIF you like -->
+        <img
+          id="catGif"
+          src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif"
+          alt="Cute cat gif"
+          loading="lazy"
+        />
+      </div>
+
+      <button class="btn btn-primary" id="tryAgainBtn">Please Try Again 🥺</button>
+    </div>
+  </div>
+
+  <audio id="popSound" preload="auto">
+    <source src="data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=" type="audio/wav">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
